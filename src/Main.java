@@ -24,19 +24,15 @@ public class Main {
         do {
             distanceCoveredDoWhile += step;
             int remaining = marathomDistance - distanceCoveredDoWhile;
-            if (remaining < 0) {
-                remaining = 0;
+            if (remaining >= 0) {
+                System.out.println("Держитесь! Осталось " + remaining + " метров");
             }
-            System.out.println("Держитесь! Осталось " + remaining + " метров");
         } while (distanceCoveredDoWhile < marathomDistance);
 
         //  Вариант 2 for
         System.out.println(" Вариант 2 цикл for ");
-        for (int distanceCoveredFor = step; distanceCoveredFor <= marathomDistance + step; distanceCoveredFor += step) {
+        for (int distanceCoveredFor = step; distanceCoveredFor <= marathomDistance; distanceCoveredFor += step) {
             int remaining = marathomDistance - distanceCoveredFor;
-            if (remaining < 0) {
-                remaining = 0;
-            }
             System.out.println("Держитесь! Осталось " + remaining + " метров");
         }
         // Задача № 3
